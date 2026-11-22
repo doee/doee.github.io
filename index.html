@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>doee, software</title>
+    <meta name="description" content="Portfolio of doee: software for listening, starting with a self-hosted music player." />
+    <meta name="theme-color" content="#2438E8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Unbounded:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#work">Skip to projects</a>
+
+    <header class="nav">
+      <a class="nav-brand" href="#top">doee</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#playground">Playground</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="sound" type="button" data-component="sound-toggle" aria-pressed="false">
+        <span class="sound-dot" aria-hidden="true"></span>
+        <span class="sound-label">Sound off</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <h1 class="sr-only">doee</h1>
+        <div class="keycaps" data-component="keycaps" data-text="doee" role="group" aria-label="The letters of my name. Drag them, or press one to flick it."></div>
+        <p class="hero-lede">I write software for listening. Right now that means a music player for my own library, on the web and on my phone.</p>
+        <p class="hero-hint">Grab a letter and throw it. It sounds better with the sound on.</p>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <h2 id="work-title" class="section-title">What I'm building</h2>
+          <ul class="projects" data-component="projects"></ul>
+        </div>
+      </section>
+
+      <section class="playground" id="playground" aria-labelledby="pg-title" data-component="playground">
+        <div class="wrap">
+          <div class="pg-head">
+            <h2 id="pg-title" class="section-title">Playground</h2>
+            <p class="pg-intro">Small experiments. Each one is a single file in this site's source, and adding a file adds a tab.</p>
+          </div>
+          <div class="pg-controls">
+            <div class="pg-tabs" role="tablist" aria-label="Experiments"></div>
+            <button class="pg-play" type="button">Pause</button>
+          </div>
+          <div class="pg-stage"></div>
+          <p class="pg-blurb" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap">
+          <h2 id="contact-title" class="contact-title">Want to build something together?</h2>
+          <a class="contact-link" href="https://github.com/doee" target="_blank" rel="noopener">Find me on GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">Built from scratch with a tiny homemade engine. No templates were harmed.</div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
